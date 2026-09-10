@@ -1,0 +1,11 @@
+# Original source files — web-ready copies live in assets/
+/*.jpg
+/*.jpeg
+/*.png
+/*.pdf
+
+# OS / editor noise
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/

@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ปภสิฏฐ์ สุภาผล · Portfolio</title>
+  <meta name="description" content="แฟ้มสะสมผลงานของปภสิฏฐ์ สุภาผล นักเรียนห้องเรียนวิทยาการคอมพิวเตอร์ (CSE) โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์” ผู้มุ่งศึกษาต่อสาขาวิชาการแปลและล่ามในยุคดิจิทัล คณะศิลปศาสตร์ มหาวิทยาลัยธรรมศาสตร์">
+  <meta name="theme-color" content="#8f1d21">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ปภสิฏฐ์ สุภาผล · Portfolio">
+  <meta property="og:description" content="ภาษา × เทคโนโลยี — แฟ้มสะสมผลงานเพื่อสมัครเข้าศึกษาสาขาวิชาการแปลและล่ามในยุคดิจิทัล มหาวิทยาลัยธรรมศาสตร์">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Noto+Serif+Thai:wght@600;700&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.classList.add("js");
+      var m = /[?&]lang=(en|th)\b/.exec(location.search), l = m ? m[1] : null;
+      if (!l) { try { l = localStorage.getItem("portfolio-lang"); } catch (e) { /* storage blocked: stay in Thai */ } }
+      if (l === "en") { d.dataset.lang = "en"; d.lang = "en"; }
+    })();
+  </script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main"><span class="th">ข้ามไปยังเนื้อหา</span><span class="en">Skip to content</span></a>
+
+  <header class="site-header">
+    <nav class="container nav" aria-label="Main">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">ป</span>
+        <span>ปภสิฏฐ์ สุภาผล<small>Papasit Supapol</small></span>
+      </a>
+      <div class="nav-tools">
+        <button class="lang-toggle" type="button" data-lang-toggle aria-pressed="false" aria-label="เปลี่ยนภาษา / Switch language">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+          <span class="th">EN</span><span class="en">TH</span>
+        </button>
+        <button class="icon-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-menu" aria-label="เมนู / Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+      <ul class="nav-links" id="site-menu">
+        <li><a href="index.html" aria-current="page"><span class="th">หน้าแรก</span><span class="en">Home</span></a></li>
+        <li><a href="about.html"><span class="th">เกี่ยวกับฉัน</span><span class="en">About</span></a></li>
+        <li><a href="education.html"><span class="th">การศึกษา</span><span class="en">Education</span></a></li>
+        <li><a href="achievements.html"><span class="th">ผลงาน</span><span class="en">Achievements</span></a></li>
+        <li><a href="goal.html"><span class="th">เป้าหมาย</span><span class="en">Goal</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow"><span class="th">แฟ้มสะสมผลงานเพื่อศึกษาต่อ</span><span class="en">University Admission Portfolio</span></p>
+          <h1>
+            <span class="th">ปภสิฏฐ์ <span class="accent">สุภาผล</span></span>
+            <span class="en">Papasit <span class="accent">Supapol</span></span>
+          </h1>
+          <p class="name-en"><span class="th">Papasit Supapol</span><span class="en">ปภสิฏฐ์ สุภาผล</span></p>
+          <p class="lead">
+            <span class="th">นักเรียนชั้นมัธยมศึกษาปีที่ 6 ห้องเรียนวิทยาการคอมพิวเตอร์ (CSE) โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์” ผู้หลงใหลทั้งภาษาและเทคโนโลยี และตั้งใจเป็นนักแปลและล่ามที่ใช้เครื่องมือดิจิทัลได้อย่างรู้เท่าทัน</span>
+            <span class="en">A Grade 12 student in the Computer Science (CSE) program at Banbueng “Utsahakam Nukhro” School — passionate about both languages and technology, and determined to become a translator and interpreter who uses digital tools wisely.</span>
+          </p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="achievements.html">
+              <span class="th">ดูผลงานของฉัน</span><span class="en">View my work</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="goal.html"><span class="th">เป้าหมายการศึกษา</span><span class="en">My goal</span></a>
+          </div>
+        </div>
+
+        <figure class="hero-photo">
+          <img src="assets/img/profile.jpg" width="479" height="640" alt="รูปถ่ายของปภสิฏฐ์ สุภาผล ในชุดนักเรียน" fetchpriority="high">
+          <figcaption class="hero-badge">
+            <img src="assets/img/tu-logo.png" width="447" height="447" alt="">
+            <span>
+              <strong><span class="th">เป้าหมาย</span><span class="en">Target</span></strong>
+              <span class="th">ศิลปศาสตร์ ธรรมศาสตร์</span><span class="en">Liberal Arts, Thammasat</span>
+            </span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="section section-alt" aria-labelledby="stats-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 id="stats-title"><span class="th">ภาพรวมโดยย่อ</span><span class="en">At a glance</span></h2>
+        </div>
+        <div class="stats">
+          <div class="stat reveal">
+            <div class="stat-value">3.84</div>
+            <div class="stat-label"><span class="th">เกรดเฉลี่ย ป.4–6</span><span class="en">GPA, Grades 4–6</span></div>
+          </div>
+          <div class="stat reveal">
+            <div class="stat-value">3.56</div>
+            <div class="stat-label"><span class="th">เกรดเฉลี่ย ม.1–3</span><span class="en">GPA, Grades 7–9</span></div>
+          </div>
+          <div class="stat reveal">
+            <div class="stat-value">3.04</div>
+            <div class="stat-label"><span class="th">เกรดเฉลี่ย ม.4–5</span><span class="en">GPA, Grades 10–11</span></div>
+          </div>
+          <div class="stat reveal">
+            <div class="stat-value">3</div>
+            <div class="stat-label"><span class="th">เกียรติบัตรในปี 2569 (ภาษา · เทคโนโลยี · กีฬา)</span><span class="en">Certificates in 2026 (language · tech · sport)</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story: language x technology -->
+    <section class="section" aria-labelledby="story-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="th">ตัวตนของผม</span><span class="en">Who I am</span></p>
+          <h2 id="story-title"><span class="th">ภาษา × เทคโนโลยี</span><span class="en">Language × Technology</span></h2>
+          <p>
+            <span class="th">ผมเรียนสายคอมพิวเตอร์ แต่หัวใจรักภาษา ในยุคที่ AI ช่วยแปลได้ในพริบตา โลกยังต้องการคนที่เข้าใจทั้ง “เครื่องมือ” และ “ความหมาย” — และนั่นคือคนที่ผมอยากเป็น</span>
+            <span class="en">I study computer science, but I love languages. In an age when AI can translate in a blink, the world still needs people who understand both the tools and the meaning — and that is who I want to be.</span>
+          </p>
+        </div>
+        <div class="grid-cards">
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h8M8 3v2M5 11s3-2 4-6M6 8s2 3 5 4"/><path d="M13 21l4-9 4 9M14.5 18h5"/></svg>
+            </div>
+            <h3><span class="th">ภาษา</span><span class="en">Language</span></h3>
+            <p><span class="th">เข้าร่วมการประเมิน ELDE และได้รับทุนการศึกษาบางส่วนเพื่อร่วมโครงการแลกเปลี่ยนภาษาและวัฒนธรรม BeWise Global Exchange</span><span class="en">Completed the ELDE English assessment and received a partial scholarship for the BeWise Global Exchange language and culture program.</span></p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg>
+            </div>
+            <h3><span class="th">เทคโนโลยี</span><span class="en">Technology</span></h3>
+            <p><span class="th">นักเรียนห้องเรียนวิทยาการคอมพิวเตอร์ (CSE) และร่วมกิจกรรมนิทรรศการเทคโนโลยี “Smart and Safe Digital Life”</span><span class="en">A student in the Computer Science (CSE) program who took part in the “Smart and Safe Digital Life” technology exhibition.</span></p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg>
+            </div>
+            <h3><span class="th">ทีมเวิร์ก</span><span class="en">Teamwork</span></h3>
+            <p><span class="th">รองชนะเลิศอันดับ 1 แบดมินตันประเภทเยาวชนชายคู่ รุ่นอายุไม่เกิน 18 ปี — การเล่นคู่ฝึกให้สื่อสารไวและตัดสินใจภายใต้ความกดดัน</span><span class="en">1st runner-up, boys’ doubles badminton (U18) — doubles play trains fast communication and decisions under pressure.</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Explore pages -->
+    <section class="section section-alt" aria-labelledby="explore-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 id="explore-title"><span class="th">สำรวจแฟ้มผลงาน</span><span class="en">Explore the portfolio</span></h2>
+        </div>
+        <div class="grid-cards">
+          <article class="card card-link reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+            </div>
+            <h3><a href="about.html"><span class="th">เกี่ยวกับฉัน</span><span class="en">About me</span></a></h3>
+            <p><span class="th">ประวัติส่วนตัว ความสนใจ และทักษะ</span><span class="en">Background, interests and skills</span></p>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </article>
+          <article class="card card-link reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg>
+            </div>
+            <h3><a href="education.html"><span class="th">ประวัติการศึกษา</span><span class="en">Education</span></a></h3>
+            <p><span class="th">เส้นทางการเรียนตั้งแต่ประถมถึงมัธยมปลาย</span><span class="en">My path from primary to upper secondary school</span></p>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </article>
+          <article class="card card-link reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>
+            </div>
+            <h3><a href="achievements.html"><span class="th">ผลงานและเกียรติบัตร</span><span class="en">Achievements</span></a></h3>
+            <p><span class="th">เกียรติบัตรด้านภาษา เทคโนโลยี และกีฬา</span><span class="en">Certificates in language, technology and sport</span></p>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </article>
+          <article class="card card-link reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>
+            </div>
+            <h3><a href="goal.html"><span class="th">เป้าหมาย</span><span class="en">My goal</span></a></h3>
+            <p><span class="th">เหตุผลที่เลือกธรรมศาสตร์ และแผนพัฒนาตนเอง</span><span class="en">Why Thammasat, and my preparation plan</span></p>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="cta reveal">
+          <div class="cta-main">
+            <img src="assets/img/tu-logo.png" width="447" height="447" alt="ตรามหาวิทยาลัยธรรมศาสตร์" loading="lazy">
+            <div>
+              <h2><span class="th">สาขาวิชาการแปลและล่ามในยุคดิจิทัล</span><span class="en">Translation and Interpretation in the Digital Age</span></h2>
+              <p><span class="th">คณะศิลปศาสตร์ มหาวิทยาลัยธรรมศาสตร์</span><span class="en">Faculty of Liberal Arts, Thammasat University</span></p>
+            </div>
+          </div>
+          <a class="btn" href="goal.html"><span class="th">อ่านเป้าหมายของผม</span><span class="en">Read my goal</span> →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 ปภสิฏฐ์ สุภาผล · <span class="th">แฟ้มสะสมผลงานเพื่อศึกษาต่อ</span><span class="en">Admission portfolio</span></p>
+      <ul class="footer-links">
+        <li><a href="about.html"><span class="th">เกี่ยวกับฉัน</span><span class="en">About</span></a></li>
+        <li><a href="education.html"><span class="th">การศึกษา</span><span class="en">Education</span></a></li>
+        <li><a href="achievements.html"><span class="th">ผลงาน</span><span class="en">Achievements</span></a></li>
+        <li><a href="goal.html"><span class="th">เป้าหมาย</span><span class="en">Goal</span></a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
