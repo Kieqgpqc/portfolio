@@ -1,10 +1,12 @@
 /*
  * Portfolio — ปภสิฏฐ์ สุภาผล
  * Progressive enhancement only: every page is fully readable with JavaScript off.
- *   1. TH / EN language toggle (remembered per browser)
+ *   1. TH / EN language toggle (remembered per browser, ?lang=en overrides)
  *   2. Mobile menu
  *   3. Certificate lightbox (<dialog>)
- *   4. Reveal-on-scroll (skipped when the user prefers reduced motion)
+ *   4. Reveal-on-scroll
+ *   5. Click ripple
+ * All motion is skipped when the visitor prefers reduced motion.
  */
 (() => {
   "use strict";
@@ -12,6 +14,7 @@
   const root = document.documentElement;
   const LANG_KEY = "portfolio-lang";
   const LANGS = ["th", "en"];
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // localStorage can throw (private mode, blocked site data). Language still
   // switches for the current page; it just won't be remembered.
@@ -41,8 +44,27 @@
   document.querySelectorAll("[data-lang-toggle]").forEach((btn) => {
     btn.addEventListener("click", () => {
       const next = root.dataset.lang === "en" ? "th" : "en";
-      applyLang(next);
-      storage.set(LANG_KEY, next);
+      const update = () => {
+        applyLang(next);
+        storage.set(LANG_KEY, next);
+      };
+
+      if (reduceMotion) {
+        update();
+        return;
+      }
+
+      btn.classList.remove("is-spinning");
+      void btn.offsetWidth; // restart the animation on rapid repeat clicks
+      btn.classList.add("is-spinning");
+      btn.addEventListener("animationend", () => btn.classList.remove("is-spinning"), { once: true });
+
+      // Cross-fade the whole page between languages where supported.
+      if (typeof document.startViewTransition === "function") {
+        document.startViewTransition(update);
+      } else {
+        update();
+      }
     });
   });
 
@@ -104,7 +126,6 @@
 
   /* ---------- 4. Reveal on scroll ---------- */
   const revealEls = document.querySelectorAll(".reveal");
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   if (!("IntersectionObserver" in window) || reduceMotion) {
     revealEls.forEach((el) => el.classList.add("is-visible"));
@@ -121,5 +142,28 @@
       { rootMargin: "0px 0px -8% 0px", threshold: 0.08 }
     );
     revealEls.forEach((el) => io.observe(el));
+  }
+
+  /* ---------- 5. Click ripple ---------- */
+  const RIPPLE_HOSTS = ".btn, .nav-links a, .lang-toggle, .icon-btn, .card-link, .cert-media";
+
+  if (!reduceMotion) {
+    document.addEventListener("pointerdown", (e) => {
+      if (e.button !== 0) return;
+      const host = e.target.closest(RIPPLE_HOSTS);
+      if (!host) return;
+
+      const rect = host.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height) * 2;
+      const ink = document.createElement("span");
+      ink.className = "ripple";
+      ink.setAttribute("aria-hidden", "true");
+      ink.style.width = `${size}px`;
+      ink.style.height = `${size}px`;
+      ink.style.left = `${e.clientX - rect.left - size / 2}px`;
+      ink.style.top = `${e.clientY - rect.top - size / 2}px`;
+      host.appendChild(ink);
+      ink.addEventListener("animationend", () => ink.remove(), { once: true });
+    });
   }
 })();
