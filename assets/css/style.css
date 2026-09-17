@@ -287,6 +287,12 @@ html[data-lang="en"] .en { display: revert; }
 .hero .btn-ghost { background: transparent; color: #fff; border-color: rgb(255 255 255 / 0.6); }
 .hero .btn-ghost:hover { border-color: var(--yellow); color: var(--yellow); }
 
+/* Contact links under the hero buttons */
+.hero-contact { display: flex; flex-wrap: wrap; gap: 0.6rem 1.5rem; list-style: none; margin: 1.5rem 0 0; padding: 0; font-size: 1.1rem; font-weight: 600; }
+.hero-contact a { display: inline-flex; align-items: center; gap: 0.5rem; color: #fff; overflow-wrap: anywhere; }
+.hero-contact a:hover { color: var(--yellow); }
+.hero-contact svg { width: 1.2em; height: 1.2em; flex: none; color: var(--yellow); }
+
 /* ---------- Sections ---------- */
 .section { padding-block: clamp(3rem, 7vw, 5.5rem); }
 .section-alt { background: var(--surface-2); }
