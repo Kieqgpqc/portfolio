@@ -746,6 +746,10 @@ html[data-lang="en"] .en { display: revert; }
   text-decoration: none;
 }
 
+/* Stacks several .cert-media (certificate + event photo) in one column. */
+.cert-gallery { display: grid; align-content: center; background: var(--surface-2); }
+.cert-gallery .cert-media + .cert-media { padding-top: 0; }
+
 .cert-media img {
   max-height: 22rem;
   width: auto;
